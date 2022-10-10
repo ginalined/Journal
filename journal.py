@@ -67,7 +67,12 @@ class Journal:
         return True
 
     def list_journal(self):
-        return self.data.key()
+        if self.data == None:
+            self.data = load_json(self.params.data_path)
+            if self.data == None:
+                return False
+        for title in self.data:
+            print(title)
 
 
 if __name__ == "__main__":
