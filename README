@@ -1,0 +1,13 @@
+This command line app record a new journal entry with a title into the list of entries.
+A user can view a list of the titles of all of the entries he/she has stored in the app.
+
+This app can be used in this way
+```
+	# Create a new journal entry
+	python journal.py --create "Contents of a new journal entry" --title "Title of entry"
+	# List the existing journal entries
+	python journal.py --list
+```
+
+The default entry data is store at "data.json". This can be changed in params.py directory
+under self.data_path parameter. 
